@@ -12,4 +12,11 @@ You can create your WebServers with ease by using this script.
 
 ## How to Use ?
 * Put your HTML files in `pages` folder.
+* Modify config.json
 * Run the script and that's it.
+
+## Config.json
+* SSID = Your WiFi Name
+* Password = Your WiFi Password
+* BaudRate = Desired BaudRate
+* Port = Server Port

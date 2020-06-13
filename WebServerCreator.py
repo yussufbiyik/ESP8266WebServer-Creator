@@ -1,4 +1,4 @@
-import re, pathlib, json
+import pathlib, json
 
 with open('config.json', 'r') as jsonFile:
     config = json.loads(jsonFile.read())

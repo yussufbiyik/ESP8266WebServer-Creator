@@ -2,5 +2,5 @@
     "SSID":"WiFi Name",
     "Password":"WiFi Password",
     "BaudRate":"115200",
-    "Port":"80"
+    "Port":80
 }

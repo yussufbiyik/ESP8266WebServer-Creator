@@ -7,17 +7,20 @@ result = open("webserver.cpp","w+")
 
 pages = []
 
-# Writing required variables and seeting up library for result file
+# Writing required variables and setting up library for result file
+ssid=config["SSID"]
+password = config["Password"]
+port = config["Port"]
+
 result.write(
-'#include <Arduino.h>'
-+'\n#include <ESP8266WebServer.h>'
-+'\n\nconst char* ssid = '
-+"\""+ config["SSID"] +"\"" 
-+';\nconst char* password = ' 
-+"\""+ config["Password"] +"\""
-+';\n\nESP8266WebServer server('
-+config["Port"] + ');\n\n\n'
-)
+"""#include <Arduino.h>
+#include <ESP8266WebServer.h>
+
+const char* ssid = \"%s\";
+const char* password = \"%s\";
+
+ESP8266WebServer server(%d);\n\n\n
+""" % (ssid,password,port))
 
 # Searching for every file in pages folder.
 try:

@@ -59,29 +59,29 @@ finally:
 # Setup of result file
 result.write(
 'void setup() {'
-+ '\n   Serial.begin('
++ '\n\tSerial.begin('
 + config["BaudRate"] + ');'
-+ '\n   delay(10);'
-+ '\n   WiFi.begin(ssid,password);'
-+ '\n   while(WiFi.status() != WL_CONNECTED){'
-+ '\n       Serial.print(\"Connection failed, trying again.\\n\");'
-+ '\n       delay(500);'
-+ '\n    }'
-+ '\n   Serial.println(\"Connected Succesfully.\\n\");'
-+ '\n   server.begin();'
-+ '\n   Serial.print("Server is live use http://");'
-+ '\n   Serial.print(WiFi.localIP());'
-+ '\n   Serial.print("/");'
-+ '\n\n   server.begin();\n'
++ '\n\tdelay(10);'
++ '\n\tWiFi.begin(ssid,password);'
++ '\n\twhile(WiFi.status() != WL_CONNECTED){'
++ '\n\t\tSerial.print(\"Connection failed, trying again.\\n\");'
++ '\n\t\tdelay(500);'
++ '\n\t}'
++ '\n\tSerial.println(\"Connected Succesfully.\\n\");'
++ '\n\tserver.begin();'
++ '\n\tSerial.print("Server is live use http://");'
++ '\n\tSerial.print(WiFi.localIP());'
++ '\n\tSerial.print("/");'
++ '\n\n\tserver.begin();\n'
 )
 
 # Declare every page
 for x in pages:
-    result.write("   server.on("+ "\"/" + x + "\", " + x +");\n")
+    result.write("\tserver.on("+ "\"/" + x + "\", " + x +");\n")
 result.write("}\n\n\n")
 
 # Loop of result file
 result.write("void loop() {"
-+ "\n   server.handleClient();"
-+ "\n   delay(1000);"
++ "\n\tserver.handleClient();"
++ "\n\tdelay(1000);"
 + "\n}")

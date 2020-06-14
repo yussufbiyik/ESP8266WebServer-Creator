@@ -22,5 +22,3 @@ You can create your WebServers with ease by using this script.
 
 ## Example Result
 You can see example result from [this page](https://gist.github.com/yussufjpg/10c04b4c92bc69da3b224e97a80e2bfa)
-
-<script src="https://gist.github.com/yussufjpg/10c04b4c92bc69da3b224e97a80e2bfa.js"></script>

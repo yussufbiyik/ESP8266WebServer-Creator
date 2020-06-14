@@ -18,5 +18,5 @@ You can create your WebServers with ease by using this script.
 ## Config.json
 * SSID = Your WiFi Name
 * Password = Your WiFi Password
-* BaudRate = Desired BaudRate
+* BaudRate = BaudRate
 * Port = Server Port
